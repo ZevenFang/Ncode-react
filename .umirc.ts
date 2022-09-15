@@ -18,6 +18,17 @@ export default defineConfig({
           path: '/dashboard/statistics',
           component: '@/pages/dashboard/statistics',
         },
+        {
+          path: '/online',
+          component: '@/layouts/content',
+          routes: [
+            {
+              exact: true,
+              path: '/online/ncform',
+              component: '@/pages/online/ncform',
+            },
+          ],
+        },
       ],
     },
   ],

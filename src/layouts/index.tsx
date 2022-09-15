@@ -10,7 +10,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './index.less';
 import Loading from './loading';
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider } = Layout;
 
 const App: React.FC = (props) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -60,10 +60,9 @@ const App: React.FC = (props) => {
               onClick: () => setCollapsed(!collapsed),
             },
           )}
+          欢迎进入 Ncode企业级低代码开发平台
         </Header>
-        <Content className="site-layout-background content">
-          {props.children}
-        </Content>
+        {props.children}
       </Layout>
     </Layout>
   );
